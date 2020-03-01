@@ -1,0 +1,11 @@
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\bin\Debug\netcoreapp3.1\ULearnCourses.exe
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\bin\Debug\netcoreapp3.1\ULearnCourses.deps.json
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\bin\Debug\netcoreapp3.1\ULearnCourses.runtimeconfig.json
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\bin\Debug\netcoreapp3.1\ULearnCourses.runtimeconfig.dev.json
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\bin\Debug\netcoreapp3.1\ULearnCourses.dll
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\bin\Debug\netcoreapp3.1\ULearnCourses.pdb
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\obj\Debug\netcoreapp3.1\ULearnCourses.csprojAssemblyReference.cache
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\obj\Debug\netcoreapp3.1\ULearnCourses.AssemblyInfoInputs.cache
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\obj\Debug\netcoreapp3.1\ULearnCourses.AssemblyInfo.cs
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\obj\Debug\netcoreapp3.1\ULearnCourses.dll
+E:\MVSprojects\StepikCourses\Inheritance\ULearnCourses\obj\Debug\netcoreapp3.1\ULearnCourses.pdb
