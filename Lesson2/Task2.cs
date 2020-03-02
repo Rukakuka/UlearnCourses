@@ -30,13 +30,16 @@ namespace ULearnCourses.Lesson2
             Console.WriteLine(GetMinX(0, 0, 0) != "Impossible");
         }
 
-        public static string GetMinX(double A, double B, double C)
+        //
+        // Summary:
+        //     Represents a double-precision floating-point number.
+        public static string GetMinX(double a, double b, double c)
         {
-            if (A <= 0)
-                if (B != 0)
+            if (a <= 0)
+                if (b != 0)
                     return "Impossible";
 
-            return (-B / (2 * A)).ToString();
+            return (-b / (2 * a)).ToString();
         }
     }
 }
