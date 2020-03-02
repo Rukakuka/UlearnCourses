@@ -7,6 +7,7 @@ namespace ULearnCourses
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            ULearnCourses.Lesson2.Task2.MinValue();
         }
     }
 }

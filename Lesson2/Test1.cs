@@ -11,7 +11,7 @@ namespace ULearnCourses.Lesson2
 	
 	class Program
 	{
-		static void Main()
+		public static void Test1()
 		{
 			System.Console.WriteLine(Min(4, 2, 3));
 		}
