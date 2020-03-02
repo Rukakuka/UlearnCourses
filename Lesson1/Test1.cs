@@ -1,4 +1,8 @@
-﻿using System;
+﻿// <Summary>
+// Области видимости - тест
+// </Summary>
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,11 @@
-﻿using System;
+﻿// <Summary>
+// Ошибки преобразования типов
+// Исправьте все ошибки преобразования типов.
+// Читайте и переводите с английского имена переменных, чтобы понять, что от вас требуется.
+// </Summary>
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
