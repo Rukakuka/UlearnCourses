@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MVSprojects\\StepikCourses\\Inheritance\\ULearnCourses\\ULearnCourses.csproj",
+      "projectUniqueName": "E:\\MVSprojects\\UlearnCourses\\ULearnCourses.csproj",
       "projectName": "ULearnCourses",
-      "projectPath": "E:\\MVSprojects\\StepikCourses\\Inheritance\\ULearnCourses\\ULearnCourses.csproj",
+      "projectPath": "E:\\MVSprojects\\UlearnCourses\\ULearnCourses.csproj",
       "packagesPath": "C:\\Users\\tehni\\.nuget\\packages\\",
-      "outputPath": "E:\\MVSprojects\\StepikCourses\\Inheritance\\ULearnCourses\\obj\\",
+      "outputPath": "E:\\MVSprojects\\UlearnCourses\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tehni\\AppData\\Roaming\\NuGet\\NuGet.Config",
