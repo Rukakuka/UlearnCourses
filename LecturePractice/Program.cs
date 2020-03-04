@@ -7,7 +7,7 @@ namespace LecturePractice
         static void Main(string[] args)
         
         {
-            LecturePractice.Lesson2.Seminar.PrintHourMinuteAngle(9, 30);
+            LecturePractice.Lesson2.Seminar.GoatAndRope(6,10);
             Console.WriteLine("Hello World!");
         }
     }

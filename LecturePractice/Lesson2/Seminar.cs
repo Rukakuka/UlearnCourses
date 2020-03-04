@@ -57,20 +57,56 @@ namespace LecturePractice.Lesson2
         // t - время подъема до h,
         // x - минимальная скорость подъема, начиная от которой закладывает уши
         // v - максимальная скорость подъема самолета
+        // Пример: Ввод (10000, 500, 50, 10) -> Вывод (125 500)
         // </Summary>
         public static void PassengersComfort(double h, double t, double v, double x)
         {
-            if (h < 5000 || 
-                h > 12000 || 
-                t < 50 || 
+            if (h < 5000 ||
+                h > 12000 ||
+                t < 50 ||
                 t > 1200 ||
-                x < 1 || 
-                x > v || 
-                v > 100 || 
+                x < 1 ||
+                x > v ||
+                v > 100 ||
                 t * v < h)
                 throw new ArgumentException();
 
+            double tmin;
+            double tmax;
 
+            // 1)
+            tmax = t;
+            // 2)
+            tmin = (h - x * t) / (v - x);
+
+            Console.WriteLine(tmin + " " + tmax);
+        }
+
+        // <Summary>
+        // Expr13. 1084. Пусти козла в огород
+        // Козла пустили в квадратный огород и привязали к колышку.Колышек воткнули точно в центре огорода.
+        // Козёл ест всё, до чего дотянется, не перелезая через забор огорода и не разрывая веревку.
+        // Какая площадь огорода будет объедена? Даны длина веревки и размеры огорода.
+        // </Summary>
+        public static void GoatAndRope(double ropeLength, double sideLength)
+        {
+            double eaten = Math.PI * ropeLength * ropeLength;
+            double farm = sideLength * sideLength;
+            
+            if (ropeLength > sideLength/2)
+            {
+                // cut the overlimiting pieces
+                double d = sideLength / 2;
+                double acos = (Math.PI / 2) - Math.Atan((d / ropeLength) / Math.Sqrt(1 - (d / ropeLength) * (d / ropeLength)));
+                double x = 2 * acos;
+                double s = 4 * (0.5 * ropeLength * ropeLength * (x - Math.Sin(x)));
+                eaten -= s;
+
+            }
+            if (eaten >= farm)
+                Console.WriteLine($"Goat has destroyed your farm, lol");
+            else
+                Console.WriteLine("Goat has eaten {0:0.##} square ones of your farm", eaten);
         }
     }
 }
