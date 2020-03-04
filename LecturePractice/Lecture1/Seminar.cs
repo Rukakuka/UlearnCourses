@@ -11,7 +11,7 @@ using System.Text;
 
 namespace LecturePractice.Lecture1
 {
-    public class Seminar1
+    public class Seminar
     {
         // <Summary>
         // Как поменять местами значения двух переменных? 
