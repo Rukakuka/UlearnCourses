@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ULearnCourses.Lesson2
+namespace LecturePractice.Lesson2
 {
     public class Task2
     {

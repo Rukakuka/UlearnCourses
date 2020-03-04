@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ULearnCourses.Lesson1
+namespace LecturePractice.Lecture1
 {
     class Task4
     {
