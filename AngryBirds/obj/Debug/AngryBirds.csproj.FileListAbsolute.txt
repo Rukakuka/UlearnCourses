@@ -1,0 +1,8 @@
+E:\MVSprojects\UlearnCourses\AngryBirds\bin\Debug\AngryBirds.exe.config
+E:\MVSprojects\UlearnCourses\AngryBirds\bin\Debug\AngryBirds.exe
+E:\MVSprojects\UlearnCourses\AngryBirds\bin\Debug\AngryBirds.pdb
+E:\MVSprojects\UlearnCourses\AngryBirds\bin\Debug\TestingRoom.dll
+E:\MVSprojects\UlearnCourses\AngryBirds\obj\Debug\AngryBirds.csprojAssemblyReference.cache
+E:\MVSprojects\UlearnCourses\AngryBirds\obj\Debug\AngryBirds.csproj.CopyComplete
+E:\MVSprojects\UlearnCourses\AngryBirds\obj\Debug\AngryBirds.exe
+E:\MVSprojects\UlearnCourses\AngryBirds\obj\Debug\AngryBirds.pdb
