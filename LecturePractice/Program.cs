@@ -7,7 +7,7 @@ namespace LecturePractice
         static void Main(string[] args)
         
         {
-            LecturePractice.Lesson2.Seminar.GoatAndRope(6,10);
+            LecturePractice.Lesson3.Task3.ThreeAverage();
             Console.WriteLine("Hello World!");
         }
     }
