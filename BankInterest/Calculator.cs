@@ -4,7 +4,11 @@ using System.Text;
 
 namespace BankInterest
 {
-    class Calculator
+    public static class Calculator
     {
+        public static  CalculatePercentage()
+        {
+
+        }
     }
 }
