@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Drawing;
 
 namespace LecturePractice.Lesson3
 {
@@ -91,6 +92,35 @@ namespace LecturePractice.Lesson3
                 var ones = value % 10;
                 return ones + decimals + hunderets;
             }
+        }
+        // <Summary>
+        // Cond5. 1740. А олени лучше
+        // Нужно проехать L километров так, чтобы любой отрезок пути длиной K километров(K ≤ L) 
+        // проезжать ровно за H часов.Мгновенная скорость не ограничена.За сколько минимум и максимум времени можно проехать этот путь?
+        // </Summary>
+        public static void DeersIsBetter()
+        {
+            throw new NotImplementedException();
+        }
+        // <Summary>
+        // Cond6. * Заданы координаты трех точек на плоскости. 
+        // Являются ли они вершинами квадрата? Если да, то найти координаты четвертой вершины.
+        // </Summary>
+        public static void SquareVertex(Point a, Point b, Point c)
+        {
+            throw new NotImplementedException();
+        }
+        // <Summary>
+        // Cond7. ** 1484. Кинорейтинг
+        // На сайте за фильм проголосовало N человек, каждый поставил оценку от 1 до 10. 
+        // Сейчас рейтинг фильма равен X(рейтинг — средняя оценка, округлённая до десятых по математическим правилам, 
+        // цифра 5 всегда округляется вверх). Сколько минимум раз нужно поставить фильму оценку 1, чтобы его рейтинг 
+        // гарантированно стал не выше Y?
+        // В решении нельзя использовать циклы.
+        // </Summary>
+        public static void CinemaRating(double currentRating, double limitRating)
+        {
+            throw new NotImplementedException();
         }
     }
 }
