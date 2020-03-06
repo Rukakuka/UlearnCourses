@@ -7,7 +7,7 @@ namespace LecturePractice
         static void Main(string[] args)
         
         {
-            LecturePractice.Lesson3.Task3.ThreeAverage();
+            Lesson3.Seminar.LuckyTicket(012200);
             Console.WriteLine("Hello World!");
         }
     }
