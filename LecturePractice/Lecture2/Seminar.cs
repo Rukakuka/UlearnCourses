@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LecturePractice.Lesson2
+namespace LecturePractice.Lecture2
 {
     public static class Seminar
     {

@@ -7,7 +7,7 @@ namespace LecturePractice
         static void Main(string[] args)
         
         {
-            Lesson3.Seminar.LuckyTicket(012200);
+            Lecture3.Seminar.LuckyTicket(012200);
             Console.WriteLine("Hello World!");
         }
     }

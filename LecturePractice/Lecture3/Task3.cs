@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LecturePractice.Lesson3
+namespace LecturePractice.Lecture3
 {
     public static class Task3
     {
