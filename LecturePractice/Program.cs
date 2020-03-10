@@ -7,7 +7,7 @@ namespace LecturePractice
         static void Main(string[] args)
         
         {
-            Lecture4.Task4.ChessBoard();
+            Lecture4.Seminar.ThreeSum(26);
             Console.WriteLine("Hello World!");
         }
     }
