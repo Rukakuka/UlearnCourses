@@ -22,7 +22,7 @@ namespace LecturePractice.Lecture4
         {
             string straight = number.ToString();
             string reversed = "";
-            for (int i = straight.Length -1; i >= 0; i--)
+            for (int i = straight.Length - 1; i >= 0; i--)
                 reversed += straight[i];
             Console.WriteLine(reversed);
         }
@@ -47,6 +47,73 @@ namespace LecturePractice.Lecture4
                 var ones = value % 10;
                 return ones + decimals + hunderets;
             }
+        }
+        // <Summary>
+        // Loops3. Если все числа натурального ряда записать подряд каждую цифру в своей позиции, 
+        // то необходимо ответить на вопрос: какая цифра стоит в заданной позиции N.
+        // </Summary>
+        public static void NaturalRow(int number)
+        {
+            string row = "";
+            for (int i = 1; i < number + 1; i++)
+                row += i.ToString();
+            Console.WriteLine(row[number - 1]);
+        }
+        // <Summary>
+        // Loops4.В массиве чисел найдите самый длинный подмассив из одинаковых чисел.
+        // </Summary>
+        public static void LongestCombo(int[] arr)
+        {
+            int combo, maxcombo;
+            maxcombo = combo = 1;
+
+            int index = -1;
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i] == arr[i - 1])
+                {
+                    combo++;
+                    if (combo > maxcombo)
+                    {
+                        index = i;
+                        maxcombo = combo;
+                    }
+                }
+                else combo = 1;
+            }
+            if (index == -1)
+            {
+                Console.WriteLine("Not found");
+                return;
+            }
+            for (int i = index - maxcombo + 1; i <= index; i++)
+                Console.Write(arr[i] + " ");
+            Console.WriteLine();
+        }
+        // <Summary>
+        // Loops5.Дана строка из символов '(' и ')'. 
+        // Определить, является ли она корректным скобочным выражением.
+        // Определить максимальную глубину вложенности скобок.
+        // </Summary>
+        public static void Brackets(string brackets)
+        {
+            if (String.IsNullOrEmpty(brackets) || brackets.Length % 2 != 0)
+                throw new ArgumentException();
+            int count = 0;
+            int maxBracket = 0;
+            for (int i = 0; i < brackets.Length; i++)
+            {
+                if (brackets[i].Equals('('))
+                {
+                    count++;
+                    if (maxBracket < count)
+                        maxBracket = count;
+                }
+                else
+                    count = 0;
+            }
+            Console.WriteLine("Max deep = {0}", maxBracket);
         }
     }
 }
