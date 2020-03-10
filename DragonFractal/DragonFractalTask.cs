@@ -1,6 +1,7 @@
 ﻿// В этом пространстве имен содержатся средства для работы с изображениями. 
 // Чтобы оно стало доступно, в проект был подключен Reference на сборку System.Drawing.dll
 using System.Drawing;
+using System;
 
 namespace Fractals
 {
@@ -27,8 +28,30 @@ namespace Fractals
 			2. Нарисуйте текущую точку методом pixels.SetPixel(x, y)
 
 			*/
+			var random = new Random(seed);
 
+			double x = 1;
+			double y = 0;
 
+			for (int i = 0; i < iterationsCount; i++)
+			{
+				double xt, yt;
+				if (random.Next() % 2 == 0)
+				{
+					xt = ((x * Math.Cos(Math.PI / 4) - y * Math.Sin(Math.PI / 4))) / Math.Sqrt(2);
+					yt = ((x * Math.Sin(Math.PI / 4) + y * Math.Cos(Math.PI / 4))) / Math.Sqrt(2);
+
+				}
+				else
+				{
+					xt = ((x * Math.Cos(3 * Math.PI / 4) - y * Math.Sin(3 * Math.PI / 4))) / Math.Sqrt(2) + 1;
+					yt = ((x * Math.Sin(3 * Math.PI / 4) + y * Math.Cos(3 * Math.PI / 4))) / Math.Sqrt(2);
+				}
+
+				x = xt;
+				y = yt;
+				pixels.SetPixel(x, y);
+			}
 		}
 	}
 }
