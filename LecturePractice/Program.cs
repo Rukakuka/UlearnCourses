@@ -7,6 +7,7 @@ namespace LecturePractice
         static void Main(string[] args)
         
         {
+            Lecture5.Task8.CrissCross();
             Console.WriteLine("Hello World!");
         }
     }
