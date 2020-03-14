@@ -32,18 +32,20 @@ namespace LecturePractice.Lecture5
         // Arr2. Перевести число из системы счисления с основанием A в систему с основанием B. 
         // Можно считать, что 2 ≤ A, B ≤ 10, а число дано в виде массива цифр.
         // </Summary>
-        public static string ChangeNumberBase(int[] value, int oldBase, int newBase)
+        public static void ChangeNumberBase(int[] value, int oldBase, int newBase)
         {
-            string newNumber = "";
-            int number = 0;
-
-            // int[] to int
+            string str = "";
+            int num = 0;
+            // int[] value to int intValue
             int j = value.Length - 1;
             for (int i = 0; i < value.Length; i++, j--)
-                number += value[i] * (int)Math.Pow(oldBase, j);
-
-           
-            return "";
+                num += value[i] * (int)Math.Pow(oldBase, j);
+            // to new base
+            do {
+                str = num % newBase + str;
+                num /= newBase;
+            } while (num != 0);
+            Console.WriteLine(str);
         }
     }
 }
