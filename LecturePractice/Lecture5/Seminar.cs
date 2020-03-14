@@ -47,5 +47,13 @@ namespace LecturePractice.Lecture5
             } while (num != 0);
             Console.WriteLine(str);
         }
+        // <Summary>
+        // Arr3. Превратить рациональную дробь a/b (0 < a < b < 100000) в десятичную. 
+        // Возможен период. "1/6" должна превратиться в "0.1(6)"
+        // </Summary>
+        public static void RationalToDecimal(int numerator, int denominator)
+        {
+            Console.WriteLine((double)numerator / denominator);
+        }
     }
 }
