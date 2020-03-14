@@ -53,7 +53,7 @@ namespace LecturePractice.Lecture5
         // </Summary>
         public static void RationalToDecimal(int numerator, int denominator)
         {
-            Console.WriteLine((double)numerator / denominator);
+            
         }
     }
 }
