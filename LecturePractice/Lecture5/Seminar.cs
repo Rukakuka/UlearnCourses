@@ -13,6 +13,37 @@ namespace LecturePractice.Lecture5
 {
     public static class Seminar
     {
+        // <Summary>
+        // Arr1. Дан массив чисел. Нужно его сдвинуть циклически на K позиций вправо, не используя других массивов.
+        // </Summary>
+        public static object[] ShiftRight(object[] arr, int shift)
+        {
+           object tmp;
+           for (int i = 0; i < shift; i++)
+           {
+                tmp = arr[arr.Length - 1]; // last item
+                for (int j = arr.Length - 1; j > 0; j--)
+                    arr[j] = arr[j - 1];
+                arr[0] = tmp;
+           }
+            return arr;
+        }
+        // <Summary>
+        // Arr2. Перевести число из системы счисления с основанием A в систему с основанием B. 
+        // Можно считать, что 2 ≤ A, B ≤ 10, а число дано в виде массива цифр.
+        // </Summary>
+        public static string ChangeNumberBase(int[] value, int oldBase, int newBase)
+        {
+            string newNumber = "";
+            int number = 0;
 
+            // int[] to int
+            int j = value.Length - 1;
+            for (int i = 0; i < value.Length; i++, j--)
+                number += value[i] * (int)Math.Pow(oldBase, j);
+
+           
+            return "";
+        }
     }
 }
