@@ -121,6 +121,30 @@ namespace TextAnalysis
 
             AssertAllSentencesEqual(expected, actual, text);
         }
+        [Test]
+        [Order(90)]
+        public void CorrectlyParse_NullSentences()
+        {
+            var text = @"   And for Di, who heard this one first.
+
+
+
+
+
+
+            1.THE BOY WHO LIVED
+
+
+            ";
+            var expected = new List<List<string>>
+            {
+                new List<string> {"and", "for", "di", "who", "heard", "this", "one", "first"},
+                new List<string> {"the", "boy", "who"}
+            };
+            var actual = SentencesParserTask.ParseSentences(text);
+            AssertAllSentencesEqual(expected, actual, text);
+        }
+
 
         protected static void AssertAllSentencesEqual(
             List<List<string>> expectedSentences,

@@ -1,54 +1,50 @@
 ﻿using System.Collections.Generic;
-using System;
 
 namespace TextAnalysis
 {
     static class SentencesParserTask
     {
-        private static char[] SplitSymbols = new char[7] { '.', '!', '?', ';', ':', '(', ')' };
+        static readonly char[] SplitSymbols = new char[7] { '.', '!', '?', ';', ':', '(', ')' };
         public static List<List<string>> ParseSentences(string text)
         {
+            var sentenceList = new List<List<string>>();
+
             var sentenceIndex = 0;
-            var wordIndex = -1;
-
-            var sentencesList = new List<List<string>>();
-
-            bool nextWord = true;
+            var wordIndex = 0;   
+            var nextWord = true;
 
             foreach (var symbol in text)
             {
                 if (char.IsLetter(symbol) || symbol.Equals('\''))
                 {
-                    if (sentencesList.Count == 0)
-                        sentencesList.Add(new List<string>());
+                    if (sentenceList.Count == 0)
+                        sentenceList.Add(new List<string>());
 
                     if (nextWord)
-                    {                        
-                        sentencesList[sentenceIndex].Add("");
-                        nextWord = false;
-                        wordIndex++;
+                    {
+                        if (sentenceList[sentenceIndex].Count != 0) 
+                            wordIndex++;
+                        sentenceList[sentenceIndex].Add("");
+                        nextWord = false;                        
                     }
-                    sentencesList[sentenceIndex][wordIndex] += symbol.ToString().ToLower(); //add a symbol to curr sentence to curr word
+                    sentenceList[sentenceIndex][wordIndex] += symbol.ToString().ToLower();
                 }
                 else
                 {
+                    nextWord = true;
                     foreach (var splitSymbol in SplitSymbols)
                     {
-                        if (symbol.Equals(splitSymbol) &&
-                            sentencesList.Count != 0 &&
-                            sentencesList[sentenceIndex].Count != 0 )
+                        if (symbol.Equals(splitSymbol) && sentenceList.Count != 0)
                         {
-                            wordIndex = -1;
-                            sentencesList.Add(new List<string>());
+                            sentenceList.Add(new List<string>());
                             sentenceIndex++;
+                            wordIndex = 0;
                             break;
                         }
-                    }
-                    nextWord = true;
+                    }                   
                 }
             }
-
-            return sentencesList;
+            return sentenceList;
         }
     }
 }
