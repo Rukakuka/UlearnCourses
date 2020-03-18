@@ -10,7 +10,7 @@ namespace TextAnalysis
             var sentenceList = new List<List<string>>();
 
             var sentenceIndex = 0;
-            var wordIndex = 0;   
+            var wordIndex = 0;
             var nextWord = true;
             var nextSentence = true;
 
@@ -25,32 +25,36 @@ namespace TextAnalysis
 
                     if (nextWord)
                     {
-                        if (sentenceList[sentenceIndex].Count != 0) 
+                        if (sentenceList[sentenceIndex].Count != 0)
                             wordIndex++;
                         sentenceList[sentenceIndex].Add("");
-                        nextWord = false;                        
+                        nextWord = false;
                     }
                     sentenceList[sentenceIndex][wordIndex] += symbol.ToString().ToLower();
                 }
                 else
                 {
                     nextWord = true;
-                    foreach (var splitSymbol in SplitSymbols)
+                    if (IsSplitSymbol(symbol) &&
+                        sentenceList.Count != 0 &&
+                        nextSentence)
                     {
-                        if (symbol.Equals(splitSymbol) &&
-                            sentenceList.Count != 0 &&
-                            nextSentence)
-                        {
-                            sentenceList.Add(new List<string>());
-                            sentenceIndex++;
-                            wordIndex = 0;
-                            nextSentence = false;
-                            break;
-                        }
-                    }                   
+                        sentenceList.Add(new List<string>());
+                        sentenceIndex++;
+                        wordIndex = 0;
+                        nextSentence = false;
+                    }
                 }
             }
             return sentenceList;
+        }
+
+        private static bool IsSplitSymbol(char c)
+        {
+            foreach (var splitSymbol in SplitSymbols)
+                if (c.Equals(splitSymbol))
+                    return true;
+            return false;
         }
     }
 }
