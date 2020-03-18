@@ -35,9 +35,7 @@ namespace TextAnalysis
                 else
                 {
                     nextWord = true;
-                    if (IsSplitSymbol(symbol) &&
-                        sentenceList.Count != 0 &&
-                        nextSentence)
+                    if (IsSplitSymbol(symbol) && sentenceList.Count != 0 && nextSentence)
                     {
                         sentenceList.Add(new List<string>());
                         sentenceIndex++;
