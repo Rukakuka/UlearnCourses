@@ -12,11 +12,14 @@ namespace TextAnalysis
             var sentenceIndex = 0;
             var wordIndex = 0;   
             var nextWord = true;
+            var nextSentence = true;
 
             foreach (var symbol in text)
             {
                 if (char.IsLetter(symbol) || symbol.Equals('\''))
                 {
+                    nextSentence = true;
+
                     if (sentenceList.Count == 0)
                         sentenceList.Add(new List<string>());
 
@@ -34,11 +37,14 @@ namespace TextAnalysis
                     nextWord = true;
                     foreach (var splitSymbol in SplitSymbols)
                     {
-                        if (symbol.Equals(splitSymbol) && sentenceList.Count != 0)
+                        if (symbol.Equals(splitSymbol) &&
+                            sentenceList.Count != 0 &&
+                            nextSentence)
                         {
                             sentenceList.Add(new List<string>());
                             sentenceIndex++;
                             wordIndex = 0;
+                            nextSentence = false;
                             break;
                         }
                     }                   

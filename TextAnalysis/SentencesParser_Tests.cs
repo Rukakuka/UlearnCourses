@@ -139,7 +139,7 @@ namespace TextAnalysis
             var expected = new List<List<string>>
             {
                 new List<string> {"and", "for", "di", "who", "heard", "this", "one", "first"},
-                new List<string> {"the", "boy", "who"}
+                new List<string> {"the", "boy", "who", "lived"}
             };
             var actual = SentencesParserTask.ParseSentences(text);
             AssertAllSentencesEqual(expected, actual, text);
