@@ -35,7 +35,9 @@ namespace TextAnalysis
                 else
                 {
                     nextWord = true;
-                    if (IsSplitSymbol(symbol) && sentenceList.Count != 0 && nextSentence)
+                    if (IsSplitSymbol(symbol) 
+                        && sentenceList.Count != 0 
+                        && nextSentence)
                     {
                         sentenceList.Add(new List<string>());
                         sentenceIndex++;
@@ -44,6 +46,8 @@ namespace TextAnalysis
                     }
                 }
             }
+            if (sentenceList.Count != 0 && sentenceList[sentenceIndex].Count == 0)
+                sentenceList.RemoveAt(sentenceIndex);
             return sentenceList;
         }
 

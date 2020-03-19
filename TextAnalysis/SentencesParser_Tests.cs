@@ -144,7 +144,21 @@ namespace TextAnalysis
             var actual = SentencesParserTask.ParseSentences(text);
             AssertAllSentencesEqual(expected, actual, text);
         }
-
+        [Test]
+        [Order(100)]
+        public void CorrectlyParse_ShortSentence()
+        {
+            var text = "a b c d. b c d. e b c a d.";
+            var expected = new List<List<string>>
+            {
+                new List<string> {"a", "b", "c", "d"},
+                new List<string> {"b", "c", "d"},
+                new List<string> {"e", "b", "c", "a", "d"}
+            };
+            var actual = SentencesParserTask.ParseSentences(text);
+            AssertAllSentencesEqual(expected, actual, text);
+        }
+        
 
         protected static void AssertAllSentencesEqual(
             List<List<string>> expectedSentences,

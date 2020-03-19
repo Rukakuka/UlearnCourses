@@ -10,6 +10,31 @@ namespace TextAnalysis
     {
         [Test]
         [Order(00)]
+        public void CustomTest()
+        {
+            var text = "a b c d. b c d. e b c a d.";
+            var parsedText = ParseText(text);
+            var expected = new Dictionary<string, string>
+            {
+                {"x", "y"},
+                {"y", "z"},
+                {"x y", "z"},
+                { "a", "b" },
+                {"b", "c" },
+                {"c", "d" },
+                {"e", "b" },
+                {"a b", "c" },
+                {"b c", "d" },
+                {"e b", "c" },
+                {"c a", "d" },
+            };
+            var actual = FrequencyAnalysisTask.GetMostFrequentNextWords(parsedText);
+
+            AssertResult(expected, actual, text);
+        }
+
+        [Test]
+        [Order(99)]
         public void ReturnEmptyDictionary_OnEmptyText()
         {
             var text = "";
