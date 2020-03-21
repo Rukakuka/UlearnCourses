@@ -2,14 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using System.IO;
 
 namespace TextAnalysis
 {
     [TestFixture]
     public class FrequencyAnalysis_Tests
     {
+        //[Test]
+        //[Order(99)]
+        //public void ParseBigText()
+        //{
+        //    var text = String.Join("", File.ReadAllLines("HarryPotterText.txt"));
+        //    var parsedText = SentencesParserTask.ParseSentences(text);
+        //    var expected = new Dictionary<string, string>
+        //    {
+        //        {"a", "b" },
+        //        {"b", "c" },
+        //        {"c", "d" },
+        //        {"e", "b" },
+        //        {"a b", "c" },
+        //        {"b c", "d" },
+        //        {"e b", "c" },
+        //        {"c a", "d" },
+        //    };
+        //    var actual = FrequencyAnalysisTask.GetMostFrequentNextWords(parsedText);
+
+        //    AssertResult(expected, actual, text);
+        //}
+
         [Test]
-        [Order(00)]
+        [Order(01)]
         public void CustomTest()
         {
             var text = "a b c d. b c d. e b c a d.";
@@ -20,10 +43,10 @@ namespace TextAnalysis
                 {"b", "c" },
                 {"c", "d" },
                 {"e", "b" },
-                //{"a b", "c" },
-                //{"b c", "d" },
-                //{"e b", "c" },
-                //{"c a", "d" },
+                {"a b", "c" },
+                {"b c", "d" },
+                {"e b", "c" },
+                {"c a", "d" },
             };
             var actual = FrequencyAnalysisTask.GetMostFrequentNextWords(parsedText);
 
@@ -31,7 +54,7 @@ namespace TextAnalysis
         }
 
         [Test]
-        [Order(00)]
+        [Order(01)]
         public void ReturnEmptyDictionary_OnEmptyText()
         {
             var text = "";
