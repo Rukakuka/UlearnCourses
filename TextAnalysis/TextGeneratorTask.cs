@@ -9,6 +9,7 @@ namespace TextAnalysis
             string phraseBeginning,
             int wordsCount)
         {
+            
             return phraseBeginning;
         }
     }

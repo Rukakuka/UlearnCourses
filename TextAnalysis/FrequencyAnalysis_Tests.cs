@@ -9,28 +9,6 @@ namespace TextAnalysis
     [TestFixture]
     public class FrequencyAnalysis_Tests
     {
-        //[Test]
-        //[Order(99)]
-        //public void ParseBigText()
-        //{
-        //    var text = String.Join("", File.ReadAllLines("HarryPotterText.txt"));
-        //    var parsedText = SentencesParserTask.ParseSentences(text);
-        //    var expected = new Dictionary<string, string>
-        //    {
-        //        {"a", "b" },
-        //        {"b", "c" },
-        //        {"c", "d" },
-        //        {"e", "b" },
-        //        {"a b", "c" },
-        //        {"b c", "d" },
-        //        {"e b", "c" },
-        //        {"c a", "d" },
-        //    };
-        //    var actual = FrequencyAnalysisTask.GetMostFrequentNextWords(parsedText);
-
-        //    AssertResult(expected, actual, text);
-        //}
-
         [Test]
         [Order(01)]
         public void CustomTest()
@@ -95,23 +73,23 @@ namespace TextAnalysis
             AssertResult(expected, actual, text);
         }
 
-        //[Test]
-        //[Order(03)]
-        //public void ReturnCorrectResult_OnTextWithOneSentenceWithMultipleWords()
-        //{
-        //    var text = "x y z";
-        //    var parsedText = ParseText(text);
-        //    var expected = new Dictionary<string, string>
-        //    {
-        //        {"x", "y"},
-        //        {"y", "z"},
-        //        {"x y", "z"}
-        //    };
+        [Test]
+        [Order(03)]
+        public void ReturnCorrectResult_OnTextWithOneSentenceWithMultipleWords()
+        {
+            var text = "x y z";
+            var parsedText = ParseText(text);
+            var expected = new Dictionary<string, string>
+            {
+                {"x", "y"},
+                {"y", "z"},
+                {"x y", "z"}
+            };
 
-        //    var actual = FrequencyAnalysisTask.GetMostFrequentNextWords(parsedText);
+            var actual = FrequencyAnalysisTask.GetMostFrequentNextWords(parsedText);
 
-        //    AssertResult(expected, actual, text);
-        //}
+            AssertResult(expected, actual, text);
+        }
 
         [Test]
         [Order(04)]
